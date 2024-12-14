@@ -57,25 +57,25 @@ Generate and review the execution plan for the desired environment. Use the appr
 #### Example for Dev Environment
 
 ```bash
-terraform plan -var-file=dev.tfvars
+terraform plan -var-file=env/dev.tfvars
 ```
 
 #### Example for QA Environment
 
 ```bash
-terraform plan -var-file=qa.tfvars
+terraform plan -var-file=env/qa.tfvars
 ```
 
 #### Example for Prod Environment
 
 ```bash
-terraform plan -var-file=prod.tfvars
+terraform plan -var-file=env/prod.tfvars
 ```
 
 (Optional) Save the plan for later use:
 
 ```bash
-terraform plan -var-file=<environment>.tfvars -out=tfplan
+terraform plan -var-file=env/<environment>.tfvars -out=tfplan
 ```
 
 ---
@@ -87,19 +87,19 @@ Apply the planned changes to deploy resources:
 #### Example for Dev Environment
 
 ```bash
-terraform apply -var-file=dev.tfvars
+terraform apply -var-file=env/dev.tfvars
 ```
 
 #### Example for QA Environment
 
 ```bash
-terraform apply -var-file=qa.tfvars
+terraform apply -var-file=env/qa.tfvars
 ```
 
 #### Example for Prod Environment
 
 ```bash
-terraform apply -var-file=prod.tfvars
+terraform apply -var-file=env/prod.tfvars
 ```
 
 If you saved the plan file in the previous step:
@@ -126,19 +126,19 @@ When you no longer need the resources, clean up by destroying the infrastructure
 #### Example for Dev Environment
 
 ```bash
-terraform destroy -var-file=dev.tfvars
+terraform destroy -var-file=env/dev.tfvars
 ```
 
 #### Example for QA Environment
 
 ```bash
-terraform destroy -var-file=qa.tfvars
+terraform destroy -var-file=env/qa.tfvars
 ```
 
 #### Example for Prod Environment
 
 ```bash
-terraform destroy -var-file=prod.tfvars
+terraform destroy -var-file=env/prod.tfvars
 ```
 
 ---
